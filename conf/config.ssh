@@ -1,0 +1,57 @@
+#home
+Host pctv 192.168.10.11
+	HostName 192.168.10.11
+	User aaron
+	
+# work salt lab
+
+Host labminion01 lab-as-saltminion01.cloud-east.dev
+	HostName lab-as-saltminion01.cloud-east.dev
+
+Host labminion1404 lab-as-saltminion1404.cloud-east.dev
+	HostName lab-as-saltminion1404.cloud-east.dev
+        User ubuntu
+
+Host labminion03 lab-as-saltminion03.cloud-east.dev
+	HostName lab-as-saltminion03.cloud-east.dev
+	User ubuntu
+
+Host labmaster01 lab-as-saltmaster01.cloud-east.dev
+	HostName lab-as-saltmaster01.cloud-east.dev
+
+# work deploy assistance hosts
+
+Host saltmaster saltmaster01.util.pdx.office
+	HostName saltmaster01.util.pdx.office
+	User utility
+	IdentityFile ~/.ssh/utility.pem
+
+Host deploy deploy01.util.pdx.prod
+	HostName deploy01.util.hq.prod
+	User utility
+	IdentityFile ~/.ssh/utility.pem
+
+Host dns dns0.util.pdx.office
+	HostName dns0.util.pdx.office
+	User utility
+	IdentityFile ~/.ssh/utility.pem
+
+# work proxy hosts
+
+Host proxy01-dev proxy01.cloud-east.dev
+	HostName proxy01.cloud-east.dev
+
+Host proxy01-staging proxy01.cloud-east.staging
+	HostName proxy01.cloud-east.staging
+	User utility
+	IdentityFile ~/.ssh/utility.pem
+
+Host proxy01-prod proxy01.cloud-east.prod
+	HostName proxy01.cloud-east.prod
+	User utility
+	IdentityFile ~/.ssh/utility.pem
+
+Host proxy02-prod proxy02.cloud-east.prod
+	HostName proxy02.cloud-east.prod
+	User utility
+	IdentityFile ~/.ssh/utility.pem
